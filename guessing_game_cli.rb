@@ -2,12 +2,12 @@
 
 def run_guessing_game
   input = gets.chomp
-  num = 6
-
-  if input == 'exit'
+  num = rand(6) + 1
+  if input == num.to_s
+    puts "You guessed the correct number!"
+  elsif input.downcase == 'exit'
     puts "Goodbye!"
-  elsif input != num
+  else
     puts "Sorry! The computer guessed #{num}."
   end
-  puts "You guessed the correct number!"
 end

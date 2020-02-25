@@ -2,7 +2,7 @@
 
 def run_guessing_game
   input = gets.chomp
-  num = rand(6) + 1
+  num = rand(7) 
   if input == num.to_s
     puts "You guessed the correct number!"
   elsif input.downcase == 'exit'
